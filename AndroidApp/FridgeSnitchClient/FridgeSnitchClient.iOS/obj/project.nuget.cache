@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "l01gzoKp6DIDzcW5qOpqicb0rX4+pgGcLemKN4ZWG69+dptmWC7++GKo/JfkDoXPQrHI0YAERi0is1f7F8tdNw==",
+  "success": true,
+  "projectFilePath": "D:\\Cases\\For PNRPU\\Internet Of THings\\IoT-project\\AndroidApp\\FridgeSnitchClient\\FridgeSnitchClient.iOS\\FridgeSnitchClient.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\2sust\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\2sust\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\2sust\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
