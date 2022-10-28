@@ -7,6 +7,8 @@ namespace FridgeSnitchClient
     public class Authentification
     {
         public bool IsAuthentificated { get; private set; } = false;
+        public bool HasConnectionTroubles { get; private set; } = false;
+
         public readonly Validator Validator = new Validator();
 
         public bool TryAuthentificate(string userName, string password)
