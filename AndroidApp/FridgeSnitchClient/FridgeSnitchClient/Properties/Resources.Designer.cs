@@ -115,6 +115,24 @@ namespace FridgeSnitchClient.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Холодильники.
+        /// </summary>
+        internal static string Friges {
+            get {
+                return ResourceManager.GetString("Friges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Вторжения.
+        /// </summary>
+        internal static string Invasions {
+            get {
+                return ResourceManager.GetString("Invasions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Введён некорректное имя пользователя.
         /// </summary>
         internal static string LoginInvalidMessage {

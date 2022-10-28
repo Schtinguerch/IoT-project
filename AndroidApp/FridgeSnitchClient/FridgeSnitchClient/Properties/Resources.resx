@@ -135,6 +135,12 @@
   <data name="Error" xml:space="preserve">
     <value>Ошибка</value>
   </data>
+  <data name="Friges" xml:space="preserve">
+    <value>Холодильники</value>
+  </data>
+  <data name="Invasions" xml:space="preserve">
+    <value>Вторжения</value>
+  </data>
   <data name="LoginInvalidMessage" xml:space="preserve">
     <value>Введён некорректное имя пользователя</value>
   </data>
