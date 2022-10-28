@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using FridgeSnitchClient.Views;
 
 namespace FridgeSnitchClient
 {
@@ -9,8 +10,7 @@ namespace FridgeSnitchClient
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new LoginView();
         }
 
         protected override void OnStart()
