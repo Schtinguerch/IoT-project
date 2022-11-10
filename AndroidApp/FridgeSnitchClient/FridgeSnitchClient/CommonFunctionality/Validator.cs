@@ -24,12 +24,12 @@ namespace FridgeSnitchClient
 
         private bool IsUserNameValid(ref string userName)
         {
-            userName = userName.Trim();
-
             if (string.IsNullOrWhiteSpace(userName))
             {
                 return false;
             }
+
+            userName = userName.Trim();
 
             if (userName.Length < MinLength || userName.Length > MaxLength)
             {
