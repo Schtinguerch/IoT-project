@@ -70,6 +70,24 @@ namespace FridgeSnitchClient.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Вы действительно собираетесь удалить видео?.
+        /// </summary>
+        internal static string AreYouGoingToDeleteVideo {
+            get {
+                return ResourceManager.GetString("AreYouGoingToDeleteVideo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Отменить изменения?.
+        /// </summary>
+        internal static string AreYouGoingToDiscardSettings {
+            get {
+                return ResourceManager.GetString("AreYouGoingToDiscardSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на KopeykinDmitriy, Schtinguêrch, SpidiMun.
         /// </summary>
         internal static string Authors {
@@ -79,11 +97,47 @@ namespace FridgeSnitchClient.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Отменить.
+        /// </summary>
+        internal static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Подтвердите действие.
+        /// </summary>
+        internal static string ConfirmAction {
+            get {
+                return ResourceManager.GetString("ConfirmAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Проблемы с соединением.
         /// </summary>
         internal static string ConnectionTroubleMessage {
             get {
                 return ResourceManager.GetString("ConnectionTroubleMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Удалить видео.
+        /// </summary>
+        internal static string DeleteVideo {
+            get {
+                return ResourceManager.GetString("DeleteVideo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Отменить изменения.
+        /// </summary>
+        internal static string DiscardChanges {
+            get {
+                return ResourceManager.GetString("DiscardChanges", resourceCulture);
             }
         }
         
@@ -111,6 +165,15 @@ namespace FridgeSnitchClient.Properties {
         internal static string Error {
             get {
                 return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Название холодильника.
+        /// </summary>
+        internal static string FridgeName {
+            get {
+                return ResourceManager.GetString("FridgeName", resourceCulture);
             }
         }
         
@@ -151,6 +214,24 @@ namespace FridgeSnitchClient.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Нет.
+        /// </summary>
+        internal static string No {
+            get {
+                return ResourceManager.GetString("No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на OK.
+        /// </summary>
+        internal static string OK {
+            get {
+                return ResourceManager.GetString("OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Пароль.
         /// </summary>
         internal static string Password {
@@ -169,11 +250,47 @@ namespace FridgeSnitchClient.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Сохранить изменения.
+        /// </summary>
+        internal static string SaveChanges {
+            get {
+                return ResourceManager.GetString("SaveChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Сохранить видео.
+        /// </summary>
+        internal static string SaveVideo {
+            get {
+                return ResourceManager.GetString("SaveVideo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Имя пользователя.
         /// </summary>
         internal static string Username {
             get {
                 return ResourceManager.GetString("Username", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Название видео.
+        /// </summary>
+        internal static string VideoFileName {
+            get {
+                return ResourceManager.GetString("VideoFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Да.
+        /// </summary>
+        internal static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
             }
         }
     }
