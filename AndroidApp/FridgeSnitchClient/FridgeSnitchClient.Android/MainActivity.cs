@@ -14,9 +14,15 @@ namespace FridgeSnitchClient.Droid
         {
             base.OnCreate(savedInstanceState);
 
+            Xam.Forms.VideoPlayer.Android.VideoPlayerRenderer.Init();
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
             LoadApplication(new App());
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop)
+            {
+                Window.SetNavigationBarColor(Android.Graphics.Color.Transparent);
+            }
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
