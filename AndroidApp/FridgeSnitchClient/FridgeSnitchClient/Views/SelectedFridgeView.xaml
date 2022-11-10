@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FridgeSnitchClient.Views.SelectedFridgeView"
+             xmlns:res="clr-namespace:FridgeSnitchClient.Properties">
+
+    <ContentPage.Resources>
+        <Style
+            x:Key="StandardEntryStyle"
+            TargetType="Entry">
+
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="FontFamily" Value="inter"></Setter>
+            <Setter Property="HeightRequest" Value="60"></Setter>
+            <Setter Property="HorizontalOptions" Value="Fill"></Setter>
+        </Style>
+
+        <Style
+            x:Key="StandardTimePickerStyle"
+            TargetType="TimePicker">
+
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="FontFamily" Value="inter"></Setter>
+            <Setter Property="HeightRequest" Value="60"></Setter>
+            <Setter Property="HorizontalOptions" Value="Fill"></Setter>
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                WidthRequest="300">
+
+                <Label 
+                    Text="{Binding SelectedFridge.FridgeName}"
+                    HorizontalOptions="CenterAndExpand"
+               
+                    FontSize="28"
+                    FontFamily="inter-bold">
+                </Label>
+
+                <Grid HeightRequest="10" />
+
+                <Entry
+                    Placeholder="{x:Static res:Resources.FridgeName}"
+                    Style="{StaticResource StandardEntryStyle}"
+                    Text="{Binding SelectedFridge.FridgeName}">
+                </Entry>
+
+                <TimePicker
+                    Time="{Binding SelectedFridge.StartTrackingTime}"
+                    Style="{StaticResource StandardTimePickerStyle}">
+                </TimePicker>
+
+                <TimePicker
+                    Time="{Binding SelectedFridge.EndTrackingTime}"
+                    Style="{StaticResource StandardTimePickerStyle}">
+                </TimePicker>
+
+                <Grid HeightRequest="20" />
+
+                <Button
+                    Text="{x:Static res:Resources.SaveChanges}"
+                    Command="{Binding SaveSettings}"
+                    FontFamily="inter-bold"
+                    FontSize="18"
+                    HeightRequest="60"
+                    TextTransform="None">
+                </Button>
+
+                <Button
+                    Text="{x:Static res:Resources.DiscardChanges}"
+                    Command="{Binding DiscardSettings}"
+                    FontFamily="inter-bold"
+                    FontSize="18"
+                    HeightRequest="60"
+                    TextTransform="None">
+                </Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
