@@ -12,6 +12,7 @@
             TargetType="Entry">
 
             <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="FontFamily" Value="inter"></Setter>
             <Setter Property="HeightRequest" Value="60"></Setter>
             <Setter Property="HorizontalOptions" Value="Fill"></Setter>
         </Style>
@@ -29,7 +30,7 @@
                     HorizontalOptions="CenterAndExpand"
                
                     FontSize="28"
-                    FontAttributes="Bold">
+                    FontFamily="inter-bold">
                 </Label>
 
                 <Grid HeightRequest="10" />
@@ -52,7 +53,7 @@
                 <Button
                     Text="{x:Static res:Resources.Enter}"
                     Command="{Binding PerformAuthentification}"
-                    FontAttributes="Bold"
+                    FontFamily="inter-bold"
                     FontSize="18"
                     HeightRequest="60"
                     TextTransform="None">
@@ -70,7 +71,7 @@
                     IsVisible="{Binding IsErrorMessageVisible}"
                
                     FontSize="22"
-                    FontAttributes="Bold">
+                    FontFamily="inter-bold">
                 </Label>
             </StackLayout>
 
