@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="FridgeSnitchClient.Views.AppTabbedView"
+            xmlns:fa="clr-namespace:FontAwesome"
+            xmlns:res="clr-namespace:FridgeSnitchClient.Properties" 
+            xmlns:views="clr-namespace:FridgeSnitchClient.Views">
+
+    <views:InvasionsView Title="{x:Static res:Resources.Invasions}">
+        <ContentPage.IconImageSource>
+            <FontImageSource FontFamily="fas" Glyph="{x:Static fa:FontAwesomeIcons.DoorOpen}"/>
+        </ContentPage.IconImageSource>
+    </views:InvasionsView>
+
+    <views:AllFridgesView Title="{x:Static res:Resources.Friges}">
+        <ContentPage.IconImageSource>
+            <FontImageSource FontFamily="fas" Glyph="{x:Static fa:FontAwesomeIcons.Box}"/>
+        </ContentPage.IconImageSource>
+    </views:AllFridgesView>
+</TabbedPage>
