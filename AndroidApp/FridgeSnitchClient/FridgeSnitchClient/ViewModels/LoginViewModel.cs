@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 using FridgeSnitchClient.Properties;
+using FridgeSnitchClient.Views;
 
 namespace FridgeSnitchClient.ViewModels
 {
@@ -69,8 +70,7 @@ namespace FridgeSnitchClient.ViewModels
 
             if (isAuthentificated)
             {
-                //TODO: Create main page for application, to be navigated
-                //Navigation.PushAsync()
+                Navigation.PushModalAsync(new AppTabbedView());
 
                 IsErrorMessageVisible = false;
                 return;
