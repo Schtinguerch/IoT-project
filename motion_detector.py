@@ -55,7 +55,12 @@ class InvasionDetector:
 
                 if self.timer_started:
                     self.timer.cancel()
-            pass
+
+                self.start_timer()
+                now_time = datetime.now().strftime("%d.%m.%Y, %H:%M:%S")
+
+                cv2.putText(frame, now_time, (25, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2, cv2.LINE_AA)
+                self.result.write(frame)
 
     def start_recording(self):
         start_time = datetime.now().strftime("%d.%m.%Y__%H.%M.%S")
