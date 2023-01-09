@@ -35,6 +35,15 @@ class InvasionDetector:
             if previous_frame is None:
                 previous_frame = prepared_frame
                 continue
+
+            diff_frame = cv2.absdiff(src1=previous_frame, src2=prepared_frame)
+            previous_frame = prepared_frame
+
+            kernel = np.ones((5, 5))
+            diff_frame = cv2.dilate(diff_frame, kernel, 1)
+
+            thresh_frame = cv2.threshold(src=diff_frame, thresh=20, maxval=255, type=cv2.THRESH_BINARY)[1]
+            contours, _ = cv2.findContours(image=thresh_frame, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_SIMPLE)
             pass
 
     def start_recording(self):
