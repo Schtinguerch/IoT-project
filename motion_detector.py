@@ -24,3 +24,18 @@ class InvasionDetector:
         self.result = cv2.VideoWriter(self.filename, cv2.VideoWriter_fourcc(*"MP4V"), 24, size)
 
         print(f"{start_time}: recording START")
+
+    def stop_recording(self):
+        self.continue_recording = False
+        self.timer_started = False
+
+        self.video.release()
+        self.result.release()
+
+        end_time = datetime.now().strftime("%d.%m.%Y__%H.%M.%S")
+
+        video_file = open(self.filename, "rb")
+        for user in self.json_bot_data["TelegramUsers"]:
+            self.tg_bot_instance.send_video(user, video_file)
+
+        print(f"{end_time}: recording END")
