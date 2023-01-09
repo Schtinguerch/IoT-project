@@ -14,3 +14,9 @@ data = json.loads(f.read())
 
 f.close()
 print("JSON Data initialized")
+
+
+def save_data():
+    stream = open('data.json', "w")
+    stream.write(json.dumps(data))
+    stream.close()
