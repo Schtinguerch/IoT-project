@@ -14,3 +14,13 @@ class InvasionDetector:
         self.tg_bot_instance = tg_bot_instance
         self.ds_bot_instance = ds_bot_instance
         self.json_bot_data = json_data
+
+    def start_recording(self):
+        start_time = datetime.now().strftime("%d.%m.%Y__%H.%M.%S")
+        self.filename = "captures/record_" + start_time + ".mp4"
+        size = (int(self.video.get(3)), int(self.video.get(4)))
+
+        self.continue_recording = True
+        self.result = cv2.VideoWriter(self.filename, cv2.VideoWriter_fourcc(*"MP4V"), 24, size)
+
+        print(f"{start_time}: recording START")
