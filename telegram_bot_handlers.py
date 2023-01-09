@@ -47,3 +47,10 @@ def on_record_start(message):
         return
 
     tg_bot.send_video(message.from_user.id, open(video, "rb"))
+
+@tg_bot.message_handler(commands=[commands.command_dictionary[3].command, "стопзапись"])
+def on_record_stop(message):
+    continue_capture[0] = False
+
+continue_capture = [True]
+print('Telegram Bot instance created')
