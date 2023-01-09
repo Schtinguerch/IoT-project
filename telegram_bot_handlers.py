@@ -27,3 +27,12 @@ def on_start_command(message):
     data_handlers.save_data()
 
     tg_bot.send_message(message.from_user.id, "Настройка прошла успешно, за сим я на страже!")
+
+@tg_bot.message_handler(commands=["снять"])
+def on_shot_command(message):
+    photo = camera_handlers.get_capture()
+    if photo == "":
+        tg_bot.send_message(message.from_user.id, "Ошибка: не удалось сделать снимок; проверьте состояние камеры")
+        return
+
+    tg_bot.send_photo(message.from_user.id, open(photo, "rb"))
