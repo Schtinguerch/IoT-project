@@ -44,6 +44,17 @@ class InvasionDetector:
 
             thresh_frame = cv2.threshold(src=diff_frame, thresh=20, maxval=255, type=cv2.THRESH_BINARY)[1]
             contours, _ = cv2.findContours(image=thresh_frame, mode=cv2.RETR_EXTERNAL, method=cv2.CHAIN_APPROX_SIMPLE)
+
+            if len(contours) > 0:
+                ret, frame = self.video.read()
+                if not ret:
+                    break
+
+                if not self.continue_recording:
+                    self.start_recording()
+
+                if self.timer_started:
+                    self.timer.cancel()
             pass
 
     def start_recording(self):
