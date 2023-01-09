@@ -21,6 +21,13 @@ class InvasionDetector:
         print("OpenCV motion detector started")
 
         while True:
+            start_time = datetime.strptime(self.json_bot_data["StartTime"], "%H:%M").time()
+            end_time = datetime.strptime(self.json_bot_data["EndTime"], "%H:%M").time()
+
+            if not self.is_time_between(start_time, end_time):
+                return
+
+            check, cur_frame = self.video.read()
             pass
 
     def start_recording(self):
