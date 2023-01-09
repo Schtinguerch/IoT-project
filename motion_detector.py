@@ -39,3 +39,11 @@ class InvasionDetector:
             self.tg_bot_instance.send_video(user, video_file)
 
         print(f"{end_time}: recording END")
+
+    def start_timer(self):
+        self.timer = Timer(2, self.stop_recording)
+        self.timer_started = True
+        self.timer.start()
+
+        current_time = datetime.now().strftime("%d.%m.%Y__%H.%M.%S")
+        print(f"{current_time}: timer RESTART")
