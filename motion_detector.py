@@ -15,6 +15,14 @@ class InvasionDetector:
         self.ds_bot_instance = ds_bot_instance
         self.json_bot_data = json_data
 
+    def start_monitoring(self):
+        previous_frame = None
+        self.video = cv2.VideoCapture(1)
+        print("OpenCV motion detector started")
+
+        while True:
+            pass
+
     def start_recording(self):
         start_time = datetime.now().strftime("%d.%m.%Y__%H.%M.%S")
         self.filename = "captures/record_" + start_time + ".mp4"
