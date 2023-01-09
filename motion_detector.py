@@ -47,3 +47,12 @@ class InvasionDetector:
 
         current_time = datetime.now().strftime("%d.%m.%Y__%H.%M.%S")
         print(f"{current_time}: timer RESTART")
+
+    def is_time_between(self, begin_time, end_time, check_time=None):
+        check_time = check_time or datetime.now().time()
+
+        if begin_time < end_time:
+            return check_time >= begin_time and check_time <= end_time
+
+        else:
+            return check_time >= begin_time or check_time <= end_time
