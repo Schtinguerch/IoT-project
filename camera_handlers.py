@@ -31,3 +31,21 @@ def record_video(condition) -> str:
 
     size = (frame_width, frame_height)
     result = cv2.VideoWriter(filename, cv2.VideoWriter_fourcc(*"MP4V"), 30, size)
+
+    while True:
+        ret, frame = video.read()
+        if not ret:
+            break
+
+        result.write(frame)
+        if condition():
+            break
+
+    video.release()
+    result.release()
+
+    end_time = datetime.now().strftime("%d.%m.%Y__%H.%M.%S")
+    result_filename = "captures/record_" + start_time + "__" + end_time + ".mp4"
+
+    os.rename(filename, result_filename)
+    return result_filename
