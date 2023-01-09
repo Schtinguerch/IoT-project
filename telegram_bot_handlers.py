@@ -36,3 +36,14 @@ def on_shot_command(message):
         return
 
     tg_bot.send_photo(message.from_user.id, open(photo, "rb"))
+
+@tg_bot.message_handler(commands=["стартзапись"])
+def on_record_start(message):
+    continue_capture[0] = True
+    video = camera_handlers.record_video(stop_capture)
+
+    if video == "":
+        tg_bot.send_message(message.from_user.id, "Ошибка: не удалось записать видео; проверьте состояние камеры")
+        return
+
+    tg_bot.send_video(message.from_user.id, open(video, "rb"))
