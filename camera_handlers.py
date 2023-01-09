@@ -14,3 +14,20 @@ def get_capture() -> str:
 
     cv2.imwrite(filename, frame)
     return filename
+
+
+def record_video(condition) -> str:
+    video = cv2.VideoCapture(1)
+
+    if not video.isOpened():
+        print("Error reading videocamera")
+        return ""
+
+    start_time = datetime.now().strftime("%d.%m.%Y__%H.%M.%S")
+    filename = "captures/record_" + start_time + ".mp4"
+
+    frame_width = int(video.get(3))
+    frame_height = int(video.get(4))
+
+    size = (frame_width, frame_height)
+    result = cv2.VideoWriter(filename, cv2.VideoWriter_fourcc(*"MP4V"), 30, size)
