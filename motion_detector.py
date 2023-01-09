@@ -28,6 +28,13 @@ class InvasionDetector:
                 return
 
             check, cur_frame = self.video.read()
+
+            prepared_frame = cv2.cvtColor(cur_frame, cv2.COLOR_BGR2GRAY)
+            prepared_frame = cv2.GaussianBlur(src=prepared_frame, ksize=(15, 15), sigmaX=0)
+
+            if previous_frame is None:
+                previous_frame = prepared_frame
+                continue
             pass
 
     def start_recording(self):
