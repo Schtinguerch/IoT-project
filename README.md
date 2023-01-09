@@ -27,5 +27,31 @@ SpidiMun | Ознобихин Елисей Андреевич | РИС-20-1б
 Аппаратная часть:
 1. Плата с поддержкой WiFi, USB
 2. Видеокамера
-3. Датчик освещённости
-4. Аккумуляторная батарея
+
+## Инструкция по развёртыванию системы
+
+Требования:
+1. Наличие интерпретатора Python, менеджера pip и venv
+2. Наличие токена от собственного telegram-бота
+3. Установленный git
+4. Видеокамера и выход в интернет на устройстве
+
+```bash
+git clone https://github.com/Schtinguerch/IoT-project.git
+cd IoT-project
+
+#Enable python virtual environment
+python -m venv virtual_env
+source virtual_env/bin/activate
+```
+
+Последняя команда для Windows вместо `source`
+```
+.\virtual_env\Scripts\activate.bat
+```
+
+Автоматическая установка зависимостей и запуск системы
+```
+pip install -r requirements.txt
+python main.py
+```
