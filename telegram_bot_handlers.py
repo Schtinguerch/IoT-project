@@ -17,7 +17,7 @@ except Exception:
     print("Error: cannot create Telegram Bot's instance, check your connection and Api Key")
     exit(1)
 
-@tg_bot.message_handler(commands=["начать"])
+@tg_bot.message_handler(commands=[commands.command_dictionary[0].command, "begin", "начать"])
 def on_start_command(message):
     if message.from_user.id in data_handlers.data["TelegramUsers"]:
         tg_bot.send_message(message.from_user.id, "Всё хорошо, я уже настроен и во всю работаю!!!")
@@ -28,7 +28,7 @@ def on_start_command(message):
 
     tg_bot.send_message(message.from_user.id, "Настройка прошла успешно, за сим я на страже!")
 
-@tg_bot.message_handler(commands=["снять"])
+@tg_bot.message_handler(commands=[commands.command_dictionary[1].command, "снять"])
 def on_shot_command(message):
     photo = camera_handlers.get_capture()
     if photo == "":
@@ -37,7 +37,7 @@ def on_shot_command(message):
 
     tg_bot.send_photo(message.from_user.id, open(photo, "rb"))
 
-@tg_bot.message_handler(commands=["стартзапись"])
+@tg_bot.message_handler(commands=[commands.command_dictionary[2].command, "стартзапись"])
 def on_record_start(message):
     continue_capture[0] = True
     video = camera_handlers.record_video(stop_capture)
